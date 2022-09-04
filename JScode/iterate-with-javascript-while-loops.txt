@@ -1,0 +1,9 @@
+// Setup
+const myArray = [];
+var i = 0;
+while (i<6){
+  myArray.push(i)
+  i++
+}
+// Only change code below this line
+console.log(myArray.reverse())

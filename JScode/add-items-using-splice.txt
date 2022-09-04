@@ -1,0 +1,10 @@
+function htmlColorNames(arr) {
+  // Only change code below this line
+const startIndex = 0;
+const dellValue = 2;
+arr.splice(startIndex, dellValue,"DarkSalmon","BlanchedAlmond");
+  // Only change code above this line
+  return arr;
+}
+
+console.log(htmlColorNames(["DarkGoldenRod", "WhiteSmoke", "LavenderBlush", "PaleTurquoise", "FireBrick"]));
