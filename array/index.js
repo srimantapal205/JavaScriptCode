@@ -22,6 +22,13 @@ arr2.splice(3,1);
 document.writeln(`<p>Splice:${arr2}</p>`);
 document.writeln(`<p>${arr2.length}</p>`);
 
+
+let xArr = ["z","y","x","w","v","u"]
+
+document.writeln(`<p>Slice value: ${xArr.slice(1,4)}</p>`)
+document.writeln(xArr.length)
+
+
 let arr3 = [1,2,3,4,5]
 let arr5 = ["a","b","c","d","e"];
 
@@ -47,3 +54,26 @@ document.writeln(`<p>javascript findIndex() & findLastIndex()</p>`);
  
 document.writeln(`<p>Index Value:  ${ users.findIndex(user => user.id == 1)}</p>`);
 document.writeln(`<p>Last Index value:  ${users.lastIndexOf(user => user.name == "Mary" )}</p>`)
+
+document.writeln(`<h4>Transform an array</h4>`);
+
+const cars = [
+  "Saab",
+  "Volvo",
+  "BMW",
+  "AUDI",
+  "SUV"
+];
+
+let getLength =  cars.map(item => item.length);
+document.writeln(getLength);
+
+let numArray = [1,6,9,7,-2,0,-3,5,6,-8];
+
+numArray.sort();
+
+document.writeln(`<p>Sort Array: ${numArray}</p>`)
+
+numArray.reverse();
+
+document.writeln(`<p>Reverse Array: ${numArray}</p>`)
