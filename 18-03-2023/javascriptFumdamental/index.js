@@ -75,4 +75,16 @@ console.log(n1)
 console.log(n2);
 
 
+ console.log(2==2);
+ console.log(2=='2')
+
+ console.log(2===2);
+ console.log(2==='2');
+
+
+ //Ternary Operator ? :
+
+ let s = 1;
+ console.log(s ? 'Yes' : 'No');
+
  
