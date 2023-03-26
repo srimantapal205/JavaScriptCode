@@ -13,7 +13,11 @@ function calculateSqure(number) {
 
 calculateSqure(1)
     .then(value  => {console.log(value);
-        throw new Error('Error')
-    } )
-        .then(value2 => {console.log(value2)} )
+       return calculateSqure(2)
+    }).then(value2 => {console.log(value2)}, reason => console.log('error happend'+reason) );
     
+
+    calculateSqure(1)
+    .then(value  => {console.log(value);
+       return calculateSqure('string')
+    }).then(value2 => {console.log(value2)}, reason => console.log('error happend'+reason) );
