@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diffrent Control Flow</title>
+</head>
+
+<body>
+    <h1>Javascript Control Flow</h1>
+
+    <h2>
+        JavaScript ternary operator ? :
+    </h2>
+    <p>syntax : <strong>condition ? If expression TRUE : If Expression False</strong></p>
+    <code>
+        let age =  18;<br>
+        let message ='';<br>
+        age >= 16 ? (message ="You can Derive"):(message="You can Not Drive");<br>
+        console.log(message);<br>
+        //Output : You can Derive.
+    </code>
+    <h3>Multiple JavaScript ternary operators example</h3>
+    <code>
+        let speed = 90;<br>
+        let message2 = speed >= 120 ? 'To Fast' : speed >= 80 ? 'Fast' : 'OK';<br>
+        console.log(message2)<br>
+        // Output: Fast 
+    </code>
+
+
+    <style>
+        * {
+            padding: 0 15px;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        h1 {
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
+    <script src="./index.js"></script>
+</body>
+
+</html>
