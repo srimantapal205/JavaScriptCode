@@ -29,8 +29,53 @@
         console.log(message2)<br>
         // Output: Fast 
     </code>
+    <h3>JavaScript switch case statement</h3>
+    <code>
 
+        let day = 3;<br>
+let dayname;<br>
+switch (day) {<br>
+    case 1 :<br>
+        dayname = 'Sunday';<br>
+        break;<br>
+    case 2:<br>
+        dayname = 'Monday';<br>
+        break;<br>
+    case 3:<br>
+        dayname = 'Tuesday';<br>
+        break;<br>
+    case 4:<br>
+        dayname = 'Wednesday';<br>
+        break;<br>
+    case 5:<br>
+        dayname = 'Thursday';<br>
+        break;<br>
+    case 6:<br>
+        dayname = 'Friday';<br>
+        break;<br>
+    case  7:<br>
+        dayname = 'Saturday'; <br>
+        break;<br>
+    default:<br>
+       dayname = 'Invalid Day';<br>
+}<br>
 
+document.writeln(`Today is :${dayname}`);<br>
+    </code>
+    <h3>the JavaScript comma operator</h3>
+    <code>
+        let board = [1,2,3,4,5,6,7,8,9];;<br>
+        let s = "";;<br>
+        for (let i = 0, j = 1; i < board.length; i++, j++) {;<br>
+            s += board[i] + ' ';;<br>
+            if (j%3===0) {;<br>
+                console.log(s);;<br>
+                document.write(`<span>${s}</span><br>`);<br>
+                s = ' ';;<br>
+            };<br>
+        };<br>
+
+    </code>
     <style>
         * {
             padding: 0 15px;
