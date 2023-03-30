@@ -86,7 +86,19 @@ let cm = convert(inToCm, 10);
 document.writeln(`<p>${cm}cm</p>`)
 
 
+//JavaScript Anonymous Functions
 
+//setTimeout(() => { alert('Ececutue later after 5 second') }, 15000 );
+
+
+
+let person = {
+   firstName: 'John',
+   lastName: 'Doe'
+};
+(function () {
+   console.log(person.firstName+' '+person.lastName)
+})(person);
 
 
 
