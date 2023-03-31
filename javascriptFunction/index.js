@@ -103,5 +103,20 @@ let person = {
 
 
 
+//JavaScript recursive functions
+
+function countDown(fromNumber){
+   console.log(fromNumber);
+   //document.writeln(fromNumber);
+   document.getElementById('CountDown').innerHTML= fromNumber;
+    let nextNumber =fromNumber - 1;
+    if (nextNumber >=0) {
+      setTimeout(() => {
+       countDown(nextNumber)
+      },2000)
+      
+    }
+}
+countDown(5)
 
 
