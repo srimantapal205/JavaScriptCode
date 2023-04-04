@@ -75,3 +75,18 @@ rabit.__proto__ = animal;
 console.log(rabit.rabitJump)
 console.log(rabit.animalEats)
 
+
+const person11 = {
+   firstName: 'John',
+   lastName:'Doe',
+   age:25
+}
+
+for (const key in person11) {
+   if (person.hasOwnProperty(key)) {
+      const value =  person[key];
+      console.log(value);
+   }
+}
+
+
