@@ -77,16 +77,54 @@ console.log(rabit.animalEats)
 
 
 const person11 = {
-   firstName: 'John',
+   firstName: 'Mac',
    lastName:'Doe',
    age:25
-}
+};
 
 for (const key in person11) {
-   if (person.hasOwnProperty(key)) {
-      const value =  person[key];
+   if (person11.hasOwnProperty(key)) {
+      const value =  person11[key];
       console.log(value);
    }
 }
+
+// ES 2017
+
+const es201Obj = Object.values(person11);
+console.log(es201Obj);
+
+const ssn = Symbol('ssn')
+const person50 = {
+   fname: "Abcd",
+   lname: "Mnp",
+   age:50,
+   [ssn]:'123-456-789'
+}
+
+const kv =  Object.entries(person50);
+console.log(kv);
+
+//JavaScript Object.assign()
+const COB = [];
+const colors = [{id:1, name:'Red'},{id:2, name:'Green'},{id:3, name:'Blue'}];
+const newColorsSet = Object.assign(COB, colors);
+console.log(newColorsSet);
+console.log(COB);
+
+
+let box = {
+   height: 10,
+    width: 20,
+    color: 'Red'
+
+}
+let style = {
+   color: 'Blue',
+   borderStyle: 'solid'
+};
+
+let boxStyle = Object.assign({},box,style);
+console.log(boxStyle);
 
 
