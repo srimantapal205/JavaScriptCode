@@ -90,4 +90,12 @@ console.log("z:"+ obj.prop3())
 console.log("R1:"+ 1<2<3);
 console.log("R2:"+ 3>2>1);
 
+/////Object decelear
+const t1 = { ["testFun"](){
+   return 0;
+}
+}
+console.log(typeof t1);
+console.log(t1.testFun())
+
 
