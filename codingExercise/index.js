@@ -98,4 +98,26 @@ const t1 = { ["testFun"](){
 console.log(typeof t1);
 console.log(t1.testFun())
 
+//11:
+function printNmber(first, second, first) {
+   console.log(first, second, first)
+}
 
+printNmber(1,2,3)
+
+//12
+// const printNmberArrow = (first, second, first) => { 
+//    console.log(first, second, first)
+//  } 
+//  printNmberArrow(1,2,3)
+
+//13:
+// const arrowFun = () => arguments.length
+// console.log(arrowFun(1,2,3))
+
+//14:
+document.writeln( String.prototype.trimLeft.name === "trimLeft");
+document.writeln( String.prototype.trimLeft.name === "trimStart");
+
+//15:
+console.log(Math.max());
