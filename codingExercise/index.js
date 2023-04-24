@@ -121,3 +121,32 @@ document.writeln( String.prototype.trimLeft.name === "trimStart");
 
 //15:
 console.log(Math.max());
+
+//16:
+console.log(10 == [10]);
+console.log(10 == [[[[[[[10]]]]]]])
+
+//17:
+console.log(10+"10")
+console.log(10-"10")
+
+//18:
+console.log([0] == false)
+if ([0]) {
+   console.log("I am true")
+}else {
+    console.log("I am false")
+}
+
+//19:
+console.log([1,2]+[3,4]);
+
+//20:
+const numbers =new Set([1,2,3,4,5]);
+console.log(numbers)
+
+const browser = new Set("Firefox")
+console.log(browser);
+
+//21:
+console.log(NaN === NaN)
