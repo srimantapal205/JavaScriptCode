@@ -44,3 +44,41 @@ class Bike{
 
 console.log(new Bike("XYZ", "red"))
 console.log(new Bike("XYZ", "red").getDetails())
+
+
+// rest parameter
+
+const restPara = (...args) => { 
+   let  total = 0;
+   for (const a of args) {
+      total += a;
+   }
+   return total
+ } 
+
+ console.log(restPara(1,2,3,4));
+
+//pass arguments with various kinds of data types such as number, string, and boolean, and you want to calculate the total of numbers only
+
+const numberSum = (...args) =>{
+   return args
+         .filter((e)=>{
+            return typeof e === "number";
+         })
+         .reduce((prev,curr) => {
+            return prev + curr
+         })
+}
+
+console.log(numberSum(10,'Hi',null,undefined,20));
+
+
+// rest parameter string concat
+
+const stringCombine = (...args) =>{
+   return args.reduce((prev, cur)=>{
+      return prev +" "+cur
+   })
+};
+
+console.log(stringCombine("I","Love","My", "Motherland"));
