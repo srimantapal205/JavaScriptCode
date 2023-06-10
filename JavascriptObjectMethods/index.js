@@ -1,15 +1,15 @@
 let car = {
-   brand:"BMW",
-   model:1980,
+   brand: "BMW",
+   model: 1980,
 }
 
 car.carFun = () => { console.log('Hello Car') };
 car.carFun();
 
-let car2 ={
-   brand:"BMW",
+let car2 = {
+   brand: "BMW",
    model: 1920,
-   combo: function () { return `${this.brand} is ${this.model}` } 
+   combo: function () { return `${this.brand} is ${this.model}` }
 }
 
 console.log(car2);
@@ -32,7 +32,7 @@ function PersonAll(firstName, lastName) {
 }
 
 PersonAll.prototype.getFullName = function () {
-   return this.firstName+' '+this.lastName;
+   return this.firstName + ' ' + this.lastName;
 }
 
 let p1 = new PersonAll("John", "Doe");
@@ -45,12 +45,12 @@ console.log(p2.getFullName());
 // Using ES6 class
 
 class PersonAll2 {
-   constructor(firstName, lastName){
+   constructor(firstName, lastName) {
       this.firstName = firstName;
       this.lastName = lastName
    }
-   getFullName(){
-      return this.firstName+' '+this.lastName;
+   getFullName() {
+      return this.firstName + ' ' + this.lastName;
    }
 }
 
@@ -64,11 +64,11 @@ console.log(x2.getFullName());
 
 //JavaScript Prototypal Inheritance
 
-let animal ={
+let animal = {
    animalEats: true
 }
 let rabit = {
-   rabitJump : true
+   rabitJump: true
 }
 
 rabit.__proto__ = animal;
@@ -78,13 +78,13 @@ console.log(rabit.animalEats)
 
 const person11 = {
    firstName: 'Mac',
-   lastName:'Doe',
-   age:25
+   lastName: 'Doe',
+   age: 25
 };
 
 for (const key in person11) {
    if (person11.hasOwnProperty(key)) {
-      const value =  person11[key];
+      const value = person11[key];
       console.log(value);
    }
 }
@@ -98,16 +98,16 @@ const ssn = Symbol('ssn')
 const person50 = {
    fname: "Abcd",
    lname: "Mnp",
-   age:50,
-   [ssn]:'123-456-789'
+   age: 50,
+   [ssn]: '123-456-789'
 }
 
-const kv =  Object.entries(person50);
+const kv = Object.entries(person50);
 console.log(kv);
 
 //JavaScript Object.assign()
 const COB = [];
-const colors = [{id:1, name:'Red'},{id:2, name:'Green'},{id:3, name:'Blue'}];
+const colors = [{ id: 1, name: 'Red' }, { id: 2, name: 'Green' }, { id: 3, name: 'Blue' }];
 const newColorsSet = Object.assign(COB, colors);
 console.log(newColorsSet);
 console.log(COB);
@@ -115,8 +115,8 @@ console.log(COB);
 
 let box = {
    height: 10,
-    width: 20,
-    color: 'Red'
+   width: 20,
+   color: 'Red'
 
 }
 let style = {
@@ -124,7 +124,81 @@ let style = {
    borderStyle: 'solid'
 };
 
-let boxStyle = Object.assign({},box,style);
+let boxStyle = Object.assign({}, box, style);
 console.log(boxStyle);
 
 
+const objLists = [
+   {
+      id: 1,
+      name: "Abcd",
+      address: {
+         l1: "Add Line-1.1",
+         l2: "Add Line-1.2",
+         l3: "Add Line-1.3",
+      },
+      child: [
+         {
+            chId: 1.1,
+            Ch_name: "Child--1.1"
+         },
+         {
+            chId: 1.2,
+            Ch_name: "Child--1.2"
+         }
+      ]
+   },
+   {
+      id: 2,
+      name: "Abcd-2",
+      address: {
+         l1: "Add Line-2.1",
+         l2: "Add Line-2.2",
+         l3: "Add Line-2.3",
+      },
+      child: [
+         {
+            chId: 2.1,
+            Ch_name: "Child--2.1"
+         },
+         {
+            chId: 2.2,
+            Ch_name: "Child--2.2"
+         }
+      ]
+   },
+   {
+      id: 3,
+      name: "Abcd-3",
+      address: {
+         l1: "Add Line-3.1",
+         l2: "Add Line-3.2",
+         l3: "Add Line-3.3",
+      },
+      child: [
+         {
+            chId: 3.1,
+            Ch_name: "Child--3.1"
+         },
+         {
+            chId: 3.2,
+            Ch_name: "Child--3.2"
+         }
+      ]
+   }
+]
+let newArr = [];
+let newObject = [];
+for (const objList of objLists) {
+   const addL3 = objList?.address?.l3
+   newArr.push(addL3);
+   const getChilds = objList?.child;
+   newObject.push(...getChilds);
+   // for (const getChild  of getChilds) {
+   //     const child  =  getChild ;
+   //     newObject.push(child); 
+   // }
+
+}
+console.log(newArr);
+console.log(newObject);

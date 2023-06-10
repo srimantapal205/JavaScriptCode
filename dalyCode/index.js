@@ -82,3 +82,8 @@ const stringCombine = (...args) =>{
 };
 
 console.log(stringCombine("I","Love","My", "Motherland"));
+
+function squaed(b) {
+	return b*b;
+}
+console.log(squaed(5));
