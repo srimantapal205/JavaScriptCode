@@ -140,11 +140,14 @@ const objLists = [
       child: [
          {
             chId: 1.1,
-            Ch_name: "Child--1.1"
+            Ch_name: "Child--1.1",
+            grandChild: [{ gcID: '1.1.1' }, { gcID: '1.1.2' }]
          },
          {
             chId: 1.2,
-            Ch_name: "Child--1.2"
+            Ch_name: "Child--1.2",
+            grandChild: [{ gcID: '1.2.1' }, { gcID: '1.2.2' }]
+
          }
       ]
    },
@@ -159,11 +162,15 @@ const objLists = [
       child: [
          {
             chId: 2.1,
-            Ch_name: "Child--2.1"
+            Ch_name: "Child--2.1",
+            grandChild: [{ gcID: '2.1.1' }, { gcID: '2.1.2' }]
+
          },
          {
             chId: 2.2,
-            Ch_name: "Child--2.2"
+            Ch_name: "Child--2.2",
+            grandChild: [{ gcID: '2.2.1' }, { gcID: '2.2.2' }]
+
          }
       ]
    },
@@ -178,27 +185,34 @@ const objLists = [
       child: [
          {
             chId: 3.1,
-            Ch_name: "Child--3.1"
+            Ch_name: "Child--3.1",
+            grandChild: [{ gcID: '3.1.1' }, { gcID: '3.1.2' }]
+
          },
          {
             chId: 3.2,
-            Ch_name: "Child--3.2"
+            Ch_name: "Child--3.2",
+            grandChild: [{ gcID: '3.2.1' }, { gcID: '3.2.2' }]
+
          }
       ]
    }
 ]
 let newArr = [];
 let newObject = [];
+let newgcObject = [];
 for (const objList of objLists) {
    const addL3 = objList?.address?.l3
    newArr.push(addL3);
+   console.log(newArr.indexOf(addL3));
    const getChilds = objList?.child;
    newObject.push(...getChilds);
-   // for (const getChild  of getChilds) {
-   //     const child  =  getChild ;
-   //     newObject.push(child); 
-   // }
+   for (const getChild of getChilds) {
+      const grandChild = getChild?.grandChild;
+      newgcObject.push(...grandChild);
+   }
 
 }
 console.log(newArr);
 console.log(newObject);
+console.log(newgcObject);
