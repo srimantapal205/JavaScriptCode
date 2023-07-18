@@ -113,7 +113,7 @@ function makeUser() {
   
   let xuser = makeUser();
   
-  alert( xuser.ref.name ); // Error: Cannot read property 'name' of undefined because there its call as a function  not as a method with "Dot" syntax.
+  //alert( xuser.ref.name ); // Error: Cannot read property 'name' of undefined because there its call as a function  not as a method with "Dot" syntax.
 
 function makeUser() {
     return {
@@ -182,4 +182,4 @@ document.writeln(userx.address && userx.address.street && userx.address.street.s
 //document.writeln(user?.address);
 //document.writeln(user?.address?.street);
 //document.writeln(user?.address?.street?.sname);
-document.writeln(user?.address.street.sname);
+document.writeln(userx?.address?.street?.sname);
