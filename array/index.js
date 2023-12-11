@@ -77,3 +77,18 @@ document.writeln(`<p>Sort Array: ${numArray}</p>`)
 numArray.reverse();
 
 document.writeln(`<p>Reverse Array: ${numArray}</p>`)
+
+// Create a array of object and extract value as a single array
+
+const data = [
+  { id: 1, product: "Abc_product-0", price: 123 },
+  { id: 2, product: "Abc_product-1", price: 456 },
+  { id: 3, product: "Abc_product-2", price: 789 }
+];
+
+
+const product = data.map(item => item.product)
+const price = data.map(item => item.price)
+document.writeln(`<p>${product}</p>`)
+document.writeln(`<p>${price}</p>`)
+
